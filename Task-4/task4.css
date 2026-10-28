@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+}
+
+img{
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.items {
+    margin: 30px;
+}
+
+#logo {
+    font-size: 25px;
+}
+
+#logoName {
+    display: inline-block;
+}
+
+h2, p {
+    margin-bottom: 10px;
+}
