@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshMart - Grocery Store</title>
+
+    <!-- fontawesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-50">
+    
+    <!-- Navbar -->
+    <nav class="bg-green-600 text-white px-6 py-4">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <h1 class="text-2xl font-bold"><i class="fa-brands fa-opencart"></i> FreshMart</h1>
+
+        <!-- Checkbox for Mobile Menu -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+        <!-- Hamburger Icon -->
+        <label for="menu-toggle" class="md:hidden text-3xl cursor-pointer peer-checked:hidden">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <!-- Close Icon -->
+        <label for="menu-toggle" class="hidden text-3xl cursor-pointer peer-checked:block">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#home" class="hover:text-yellow-300">Home</a>
+          <a href="#products" class="hover:text-yellow-300">Products</a>
+          <a href="#contact" class="hover:text-yellow-300">Contact</a>
+
+          <a
+            href="#products"
+            class="bg-yellow-400 text-gray-900 px-4 py-2 rounded hover:bg-yellow-300"
+          >
+            Shop Now
+          </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          class="hidden peer-checked:flex flex-col gap-4 absolute top-16 left-0 w-full bg-green-700 p-6 md:hidden"
+        >
+          <a href="#home" class="hover:text-yellow-300">Home</a>
+          <a href="#products" class="hover:text-yellow-300">Products</a>
+          <a href="#contact" class="hover:text-yellow-300">Contact</a>
+
+          <a
+            href="#products"
+            class="bg-yellow-400 text-gray-900 px-4 py-2 rounded hover:bg-yellow-300 w-fit"
+          >
+            Shop Now
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-green-100 px-6 py-16 md:py-24">
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+      >
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl md:text-5xl font-bold text-green-800 mb-5">
+            Fresh Groceries Delivered to Your Door
+          </h2>
+
+          <p class="text-gray-600 text-lg mb-6">
+            Shop fresh fruits, vegetables and daily essentials at affordable
+            prices. Healthy food, happy life!
+          </p>
+
+          <a
+            href="#products"
+            class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700"
+          >
+            Explore Products
+          </a>
+        </div>
+
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800"
+            alt="Fresh fruits and vegetables"
+            class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Grocery Cards Section -->
+    <section id="products" class="px-6 py-16">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-green-800 mb-3">
+          Our Fresh Products
+        </h2>
+
+        <p class="text-center text-gray-500 mb-10">
+          Choose your favourite groceries
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500"
+              alt="Fresh apples"
+              class="w-full h-48 object-cover"
+            />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold mb-2">Fresh Apples</h3>
+
+              <p class="text-gray-500 mb-3">Sweet and juicy apples.</p>
+
+              <p class="text-green-700 font-bold text-lg mb-4">₹120 / kg</p>
+
+              <button
+                class="bg-green-600 text-white w-full py-2 rounded hover:bg-green-700"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500"
+              alt="Fresh vegetables"
+              class="w-full h-48 object-cover"
+            />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold mb-2">Fresh Vegetables</h3>
+
+              <p class="text-gray-500 mb-3">Healthy and green vegetables.</p>
+
+              <p class="text-green-700 font-bold text-lg mb-4">₹80 / kg</p>
+
+              <button
+                class="bg-green-600 text-white w-full py-2 rounded hover:bg-green-700"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500"
+              alt="Fresh milk"
+              class="w-full h-48 object-cover"
+            />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold mb-2">Fresh Milk</h3>
+
+              <p class="text-gray-500 mb-3">
+                Fresh and nutritious milk.
+              </p>
+
+              <p class="text-green-700 font-bold text-lg mb-4">₹60 / litre</p>
+
+              <button
+                class="bg-green-600 text-white w-full py-2 rounded hover:bg-green-700"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500"
+              alt="Fresh bananas"
+              class="w-full h-48 object-cover"
+            />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold mb-2">Fresh Bananas</h3>
+
+              <p class="text-gray-500 mb-3">Naturally sweet ripe bananas.</p>
+
+              <p class="text-green-700 font-bold text-lg mb-4">₹50 / kg</p>
+
+              <button
+                class="bg-green-600 text-white w-full py-2 rounded hover:bg-green-700"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="bg-green-800 text-white px-6 py-12">
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-center"
+      >
+        <!-- Contact Details -->
+        <div>
+          <h2 class="text-2xl font-bold mb-5">Contact Us</h2>
+
+          <p class="mb-3">Have questions? We are happy to help!</p>
+
+          <p class="mb-2">Email: info@freshmart.com</p>
+
+          <p class="mb-2">Phone: +91 98765 67890</p>
+
+          <p>Address: Kerala, India</p>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h2 class="text-2xl font-bold mb-5">Subscribe to Our Mailbox</h2>
+
+          <p class="mb-4">Receive updates and special offers.</p>
+
+          <form class="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="p-3 rounded border text-gray-950 w-full focus:outline-none"
+            />
+
+            <button
+              type="submit"
+              class="bg-yellow-400 text-gray-900 px-5 py-3 rounded font-semibold hover:bg-yellow-300"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center p-5">
+      <div class="flex justify-center gap-5 mt-3 text-gray-300">
+        <a
+          target="_blank"
+          href="https://www.facebook.com/"
+          class="hover:text-yellow-300"
+          ><i class="fa-brands fa-square-facebook"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/"
+          class="hover:text-yellow-300"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/"
+          class="hover:text-yellow-300"
+          ><i class="fa-brands fa-square-youtube"></i
+        ></a>
+      </div>
+      <br />
+
+      <p>&copy; 2026 FreshMart. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
